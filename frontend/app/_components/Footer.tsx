@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-5 gap-10">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <Image src="/logo.png" alt="NomNom" width={40} height={40} />
+            <Image src="/Header.png" alt="NomNom" width={40} height={40} />
             <div>
               <p className="text-white font-semibold">NomNom</p>
               <p className="text-xs text-gray-400">Swift delivery</p>
