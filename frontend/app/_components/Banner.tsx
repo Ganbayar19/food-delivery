@@ -25,22 +25,24 @@ export default function Banner() {
           </div>
         </div>
       </div>
+      <div>
+        <Image
+          src="/Plate.png"
+          alt="Main plate"
+          width={420}
+          height={420}
+          className="absolute right-[220px] top-1/2 -translate-y-1/2 z-20"
+        />
+        <Image
+          src="/Dessert.png"
+          alt="Dessert"
+          width={150}
+          height={150}
+          className="absolute right-[70px] top-[28px] z-30"
+        />
+      </div>
       <Image
-        src="/plate.png"
-        alt="Main plate"
-        width={420}
-        height={420}
-        className="absolute right-[220px] top-1/2 -translate-y-1/2 z-20"
-      />
-      <Image
-        src="/dessert.png"
-        alt="Dessert"
-        width={150}
-        height={150}
-        className="absolute right-[70px] top-[28px] z-30"
-      />
-      <Image
-        src="/plus.png"
+        src="/Plus icon.png"
         alt="Plus"
         width={34}
         height={34}

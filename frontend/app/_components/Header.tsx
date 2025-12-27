@@ -8,7 +8,7 @@ export default function Header() {
       <div className="flex items-center gap-3 select-none">
         <div className="w-9 h-9 rounded-md overflow-hidden">
           <Image
-            src="/logo.png"
+            src="/Header.png"
             alt="NomNom logo"
             width={36}
             height={36}
