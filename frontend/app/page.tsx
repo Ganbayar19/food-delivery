@@ -7,11 +7,10 @@ import Banner from "./_components/Banner";
 import Footer from "./_components/Footer";
 import CreateAccount from "./_components/login/CreateAccount";
 import Login from "./_components/login/Login";
+import FoodSection from "./_components/FoodSection";
 
 export default function Page() {
   const [step, setStep] = useState<"signup" | "login" | "home">("signup");
-
-  // Refresh хийхэд login хадгалах
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
@@ -28,8 +27,6 @@ export default function Page() {
     localStorage.removeItem("token");
     setStep("login");
   };
-
-  // 🔐 AUTH SCREENS (энд Header/Banner/Footer ОРОХГҮЙ)
   if (step === "signup") {
     return <CreateAccount goLogin={() => setStep("login")} />;
   }
@@ -37,15 +34,15 @@ export default function Page() {
   if (step === "login") {
     return <Login goLogin={handleLogin} goSignup={() => setStep("signup")} />;
   }
-
-  // 🏠 HOME (энд л Header/Banner/Footer харагдана)
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#0f0f0f]">
       <Header goLogout={handleLogout} />
       <Banner />
 
-      <main className="flex-1">
-        <h1 className="text-3xl font-bold p-10">Home content here</h1>
+      <main className="flex-1 max-w-7xl mx-auto px-6 py-10 space-y-14">
+        <FoodSection title="Appetizers" />
+        <FoodSection title="Salads" />
+        <FoodSection title="Lunch favorites" />
       </main>
 
       <Footer />

@@ -1,53 +1,21 @@
-"use client";
-import Image from "next/image";
-
 export default function Banner() {
   return (
-    <section className="relative w-full h-[280px] overflow-hidden bg-black">
-      <Image
-        src="/banner-bg.png"
-        alt="Banner background"
-        fill
-        className="object-cover"
-        priority
+    <section className="relative h-[260px] bg-black text-white overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1544025162-d76694265947"
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
       />
-      <div className="relative z-10 h-full flex items-center pl-12">
+
+      <div className="relative z-10 h-full flex items-center px-12">
         <div>
-          <h1 className="text-white text-[48px] leading-tight font-extrabold">
-            TODAY’S
-            <br />
-            OFFER!
-          </h1>
-          <div className="mt-4 inline-flex items-center bg-[#ff4d3f] rounded-full px-6 py-2">
-            <span className="text-white font-bold tracking-wide">
-              STEAK SOCIETY
-            </span>
-          </div>
+          <h2 className="text-4xl font-extrabold">
+            TODAY’S <span className="text-red-500">OFFER!</span>
+          </h2>
+          <p className="mt-2 bg-red-600 inline-block px-4 py-1 rounded-full text-sm font-semibold">
+            STEAK SOCIETY
+          </p>
         </div>
       </div>
-      <div>
-        <Image
-          src="/Plate.png"
-          alt="Main plate"
-          width={420}
-          height={420}
-          className="absolute right-[220px] top-1/2 -translate-y-1/2 z-20"
-        />
-        <Image
-          src="/Dessert.png"
-          alt="Dessert"
-          width={150}
-          height={150}
-          className="absolute right-[70px] top-[28px] z-30"
-        />
-      </div>
-      <Image
-        src="/Plus icon.png"
-        alt="Plus"
-        width={34}
-        height={34}
-        className="absolute right-[250px] top-[78px] z-40"
-      />
     </section>
   );
 }
