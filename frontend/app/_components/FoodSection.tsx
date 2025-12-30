@@ -1,48 +1,42 @@
+"use client";
+
+import { useState } from "react";
 import FoodCard from "./FoodCard";
+import FoodModal from "./FoodModal";
 
-const foods = [
-  {
-    title: "Finger food",
-    price: "$12.99",
-    img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
-  },
-  {
-    title: "Cranberry Brie Bites",
-    price: "$12.99",
-    img: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe",
-  },
-  {
-    title: "Sunshine Stackers",
-    price: "$12.99",
-    img: "https://images.unsplash.com/photo-1551218808-94e220e084d2",
-  },
-  {
-    title: "Brie Crostini Appetizer",
-    price: "$12.99",
-    img: "https://images.unsplash.com/photo-1604908177225-6b1b3d1d4f8c",
-  },
-  {
-    title: "Sunshine Stackers",
-    price: "$12.99",
-    img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
-  },
-  {
-    title: "Grilled chicken",
-    price: "$12.99",
-    img: "https://images.unsplash.com/photo-1606755962773-d324e0a13086",
-  },
-];
+export default function FoodSection() {
+  const [openFood, setOpenFood] = useState<any>(null);
 
-export default function FoodSection({ title }: { title: string }) {
+  const foods = [
+    {
+      title: "Sunshine Stackers",
+      price: 12.99,
+      img: "/food1.jpg",
+    },
+  ];
+
   return (
-    <section className="mb-12">
-      <h2 className="text-white text-lg font-semibold mb-6">{title}</h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {foods.map((item, i) => (
-          <FoodCard key={i} {...item} />
+    <>
+      <div className="grid grid-cols-4 gap-6">
+        {foods.map((food, i) => (
+          <FoodCard
+            key={i}
+            title={food.title}
+            price={`$${food.price}`}
+            img={food.img}
+            onClick={() => setOpenFood(food)}
+          />
         ))}
       </div>
-    </section>
+
+      {openFood && (
+        <FoodModal
+          title={openFood.title}
+          price={openFood.price}
+          img={openFood.img}
+          onClose={() => setOpenFood(null)}
+        />
+      )}
+    </>
   );
 }

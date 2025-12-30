@@ -2,14 +2,21 @@ type Props = {
   title: string;
   price: string;
   img: string;
+  onClick: () => void;
 };
 
-export default function FoodCard({ title, price, img }: Props) {
+export default function FoodCard({ title, price, img, onClick }: Props) {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+    <div
+      onClick={onClick}
+      className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer"
+    >
       <div className="relative">
         <img src={img} alt={title} className="h-44 w-full object-cover" />
-        <button className="absolute bottom-2 right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow">
+        <button
+          onClick={(e) => e.stopPropagation()}
+          className="absolute bottom-2 right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow"
+        >
           ❤️
         </button>
       </div>
