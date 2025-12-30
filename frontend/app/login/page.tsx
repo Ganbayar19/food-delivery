@@ -6,7 +6,7 @@ export default function LoginPage() {
   };
 
   const handleGoSignup = () => {
-    window.location.href = "/"; // Эсвэл өөр зам руу шилжүүлэх
+    window.location.href = "/";
   };
 
   return <Login goLogin={handleLogin} goSignup={handleGoSignup} />;
