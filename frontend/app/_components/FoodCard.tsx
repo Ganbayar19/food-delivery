@@ -1,42 +1,54 @@
-type Props = {
-  title: string;
+
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Plus } from "lucide-react";
+
+export interface FoodItem {
+  id: number;
+  name: string;
   price: string;
-  img: string;
-  onClick?: () => void;
-};
+  description: string;
+  image: string;
+}
 
-export default function FoodCard({ title, price, img, onClick }: Props) {
+interface FoodCardProps {
+  item: FoodItem;
+  onClick: (item: FoodItem) => void;
+}
+
+export function FoodCard({ item, onClick }: FoodCardProps) {
   return (
-    <div
-      onClick={onClick}
-      className="bg-white rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer overflow-hidden"
-    >
-      <div className="relative">
+    <Card className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 p-0 bg-white">
+      <div className="relative h-40 overflow-hidden group">
         <img
-          src="/food.png.png"
-          alt={title}
-          className="w-full h-44 object-cover"
+          src={item.image}
+          alt={item.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <button
-          onClick={(e) => e.stopPropagation()}
-          className="absolute bottom-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow"
+        <Button
+          size="icon"
+          className="absolute bottom-3 right-3 w-8 h-8 bg-white text-gray-900 rounded-full shadow-md hover:bg-red-500 hover:text-white hover:shadow-lg transition-all"
+          onClick={() => onClick(item)}
         >
-          +
-        </button>
+          <Plus className="h-4 w-4" />
+        </Button>
       </div>
-      <div className="p-4">
-        <h3 className="font-semibold text-sm text-gray-900 line-clamp-1">
-          {title}
-        </h3>
 
-        <p className="text-xs text-gray-500 mt-1 leading-snug line-clamp-2">
-          Fully pancaked stacked with fruits, cream, syrup, and powdered sugar.
-        </p>
-
-        <div className="mt-3">
-          <span className="text-red-500 font-semibold text-sm">{price}</span>
+      <CardContent className="p-4">
+        <div className="flex justify-between items-start mb-1.5">
+          <h4 className="text-red-500 font-bold text-base leading-tight">
+            {item.name}
+          </h4>
+          <span className="text-gray-900 font-bold text-sm whitespace-nowrap ml-2">
+            {item.price}
+          </span>
         </div>
-      </div>
-    </div>
+        <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
+          {item.description}
+        </p>
+      </CardContent>
+    </Card>
   );
 }
