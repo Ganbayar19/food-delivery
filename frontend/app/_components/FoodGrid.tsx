@@ -1,5 +1,5 @@
 import { foods, Food } from "./data/food";
-import FoodCard from "./FoodCard";
+import {FoodCard} from "./FoodCard";
 
 const sections = [
   { title: "Appetizers", key: "appetizer" },

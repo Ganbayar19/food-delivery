@@ -1,52 +1,60 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 
-export default function Header() {
+import { Button } from "@/components/ui/button";
+import { ShoppingCart } from "lucide-react";
+
+interface HeaderProps {
+  totalItems: number;
+  onCartClick: () => void;
+}
+
+export function Header({ totalItems, onCartClick }: HeaderProps) {
   return (
-    <header className="w-full h-16 bg-[#0f0f0f] flex items-center px-6">
-      <div className="flex items-center gap-3 select-none">
-        <div className="w-9 h-9 rounded-md overflow-hidden">
-          <Image
-            src="/Header.png"
-            alt="NomNom logo"
-            width={36}
-            height={36}
-            className="object-cover"
-          />
-        </div>
-
-        <div className="leading-tight">
-          <p className="text-white font-semibold">NomNom</p>
-          <p className="text-xs text-gray-400">Swift delivery</p>
-        </div>
-      </div>
-      <div className="flex-1 flex justify-center">
-        <Link
-          href="/location"
-          className="h-9 px-4 rounded-full bg-white flex items-center gap-2 text-sm
-                     cursor-pointer hover:bg-gray-100"
-        >
-          <span className="text-red-500 font-medium">Delivery address:</span>
-          <span className="text-gray-600">Add Location</span>
-        </Link>
-      </div>
+    <header className="bg-[#1a1a1a] px-8 py-3 flex items-center justify-between border-b border-gray-800">
       <div className="flex items-center gap-3">
-        <Link
-          href="/cart"
-          className="w-9 h-9 rounded-full bg-white flex items-center justify-center
-                     cursor-pointer hover:bg-gray-200"
-        >
-          🛒
-        </Link>
+        <div className="bg-gradient-to-br from-red-500 to-red-600 w-9 h-9 rounded-lg flex items-center justify-center shadow-md">
+          <span className="text-white text-lg font-bold">🍜</span>
+        </div>
+        <div>
+          <h1 className="text-white font-bold text-base leading-none">
+            NomNom
+          </h1>
+          <p className="text-gray-400 text-[10px] mt-0.5">Swift delivery</p>
+        </div>
+      </div>
 
-        <Link
-          href="/login"
-          className="w-9 h-9 rounded-full bg-red-500 flex items-center justify-center
-                     text-white cursor-pointer hover:opacity-90"
+      <div className="flex items-center gap-3">
+        <Button
+          variant="outline"
+          className="px-4 py-1.5 h-9 bg-white rounded-full text-xs flex items-center gap-2 hover:bg-gray-50 border-none shadow-sm"
         >
-          👤
-        </Link>
+          <span className="text-red-500 text-sm">📍</span>
+          <span className="text-gray-700 font-medium">
+            Delivery address: Add Location
+          </span>
+          <span className="text-gray-400 text-xs">▼</span>
+        </Button>
+
+        <Button
+          size="icon"
+          variant="ghost"
+          className="w-9 h-9 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
+        >
+          <span className="text-white text-sm">🔍</span>
+        </Button>
+
+        <Button
+          size="icon"
+          className="w-9 h-9 bg-red-500 rounded-full hover:bg-red-600 relative transition-all shadow-md"
+          onClick={onCartClick}
+        >
+          <ShoppingCart className="h-4 w-4 text-white" />
+          {totalItems > 0 && (
+            <span className="absolute -top-1 -right-1 bg-white text-red-500 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">
+              {totalItems}
+            </span>
+          )}
+        </Button>
       </div>
     </header>
   );
