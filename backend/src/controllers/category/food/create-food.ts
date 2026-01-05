@@ -1,5 +1,5 @@
 import type { RequestHandler } from "express";
-import { FoodModel } from "../../../database/schema/foood.schema.js";
+import { FoodModel } from "../../../database/schema/food.schema.js";
 
 export const createFood: RequestHandler = async (req, res) => {
   const body = req.body;
