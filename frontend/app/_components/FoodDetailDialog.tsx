@@ -2,13 +2,17 @@
 
 import { FoodCard, FoodItem } from "./FoodCard";
 
-interface FoodGridProps {
+interface FoodDetailDialogProps {
   title: string;
   items: FoodItem[];
   onItemClick: (item: FoodItem) => void;
 }
 
-export function FoodGrid({ title, items, onItemClick }: FoodGridProps) {
+export function FoodDetailDialog({
+  title,
+  items,
+  onItemClick,
+}: FoodDetailDialogProps) {
   return (
     <div className="px-8 py-8">
       <h3 className="text-white text-2xl font-bold mb-6">{title}</h3>
