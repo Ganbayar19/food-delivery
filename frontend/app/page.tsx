@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import { toast } from "sonner";
-import { Header } from "./_components/Header";
-import Banner from "./_components/Banner";
-import { FoodGrid } from "./_components/FoodDetailDialog";
-import { FoodItem } from "./_components/FoodCard";
-import { useCart } from "@/app/Context/CardContext";
-import { FoodDetailDialog } from "./_components/FoodDetailDialog";
-
+import { Header } from "@/app/_components/Header";
+import  Banner  from "@/app/_components/Banner";
+import  FoodGrid  from "@/app/_components/FoodGrid";
+import { FoodDetailDialog} from "@/app/_components/FoodDetailDialog";
+import { FoodItem } from "@/app/_components/FoodCard";
+import { useCart } from "./Context/CardContext";
 
 const foodItems = [
   {
