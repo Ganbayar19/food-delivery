@@ -8,22 +8,16 @@ interface HeaderProps {
   onCartClick: () => void;
 }
 
-
 export default function Header({ totalItems, onCartClick }: HeaderProps) {
-
-export function Header({ totalItems, onCartClick }: HeaderProps) {
-
   return (
     <header className="bg-[#1a1a1a] px-8 py-3 flex items-center justify-between border-b border-gray-800">
       <div className="flex items-center gap-3">
         <div className="bg-gradient-to-br from-red-500 to-red-600 w-9 h-9 rounded-lg flex items-center justify-center shadow-md">
-
           <span className="text-white text-lg font-bold">
             <img src="/Header.png" alt="header" />
           </span>
 
           <span className="text-white text-lg font-bold">🍜</span>
-
         </div>
         <div>
           <h1 className="text-white font-bold text-base leading-none">
@@ -38,7 +32,6 @@ export function Header({ totalItems, onCartClick }: HeaderProps) {
           variant="outline"
           className="px-4 py-1.5 h-9 bg-white rounded-full text-xs flex items-center gap-2 hover:bg-gray-50 border-none shadow-sm"
         >
-
           <span className="text-red-500 text-sm">
             <img src="/location.png" alt="icon" />
           </span>

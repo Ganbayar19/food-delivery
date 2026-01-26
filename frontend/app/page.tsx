@@ -11,13 +11,6 @@ import { FoodDetailDialog } from "./_components/FoodDetail-Dialog";
 import { FoodItem } from "./_components/FoodCard";
 import { useCart } from "@/Context/CardContext";
 
-import { Header } from "@/app/_components/Header";
-import Banner from "@/app/_components/Banner";
-import FoodGrid from "@/app/_components/FoodGrid";
-import { FoodDetailDialog } from "@/app/_components/FoodDetailDialog";
-import { FoodItem } from "@/app/_components/FoodCard";
-import { useCart } from "./Context/CardContext";
-
 const foodItems = [
   {
     id: 1,

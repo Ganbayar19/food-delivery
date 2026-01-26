@@ -1,12 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Minus, Plus, X } from "lucide-react";
 import { CartItem as CartItemType } from "@/Context/CardContext";
-
-("use client");
-
-import { Button } from "@/components/ui/button";
-import { Minus, Plus, X } from "lucide-react";
-import { CartItem as CartItemType } from "@/app/Context/CardContext";
 
 interface CartItemProps {
   item: CartItemType;

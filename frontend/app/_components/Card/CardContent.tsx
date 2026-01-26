@@ -4,12 +4,6 @@ import { CartItem as CartItemType } from "@/Context/CardContext";
 import { CartItem } from "./CardItem";
 import { EmptyCart } from "./EmptyCard";
 import { DeliveryLocation } from "./DeliveryLocation";
-import { PaymentSummary } from "./PlaymentSummrary";
-
-import { CartItem as CartItemType } from "@/app/Context/CardContext";
-import { CartItem } from "./CardItem";
-import { EmptyCart } from "./EmptyCard";
-import { DeliveryLocation } from "./DeliveryLocation";
 import { PaymentSummary } from "./PaymentSummary";
 
 import { Button } from "@/components/ui/button";
