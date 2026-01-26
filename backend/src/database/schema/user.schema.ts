@@ -7,10 +7,11 @@ const userSchema = new Schema(
     password: { type: Number, required: true },
     profileImge: { type: Number, required: false },
     address: { type: Number, required: false },
+    role: { type: String, required: true, default: "customer" },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 export const userModel = model("User", userSchema);
