@@ -4,9 +4,6 @@ export default function Banner() {
       <div className="w-full ">
         <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
           <img src="/Banner.png" alt="Banner" className="w-full object-cover" />
-      <div className="w-full">
-        <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-          <img src="/Banner.png" alt="Banner" className="w-fullobject-cover" />
         </div>
       </div>
     </section>
