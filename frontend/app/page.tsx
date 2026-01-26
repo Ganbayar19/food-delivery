@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { toast } from "sonner";
-<<<<<<< HEAD
+
 import { CartDrawer } from "./_components/CardDrawer";
 import Header from "./_components/Header";
 import Banner from "./_components/Banner";
@@ -10,14 +10,13 @@ import { FoodGrid } from "./_components/FoodGrid";
 import { FoodDetailDialog } from "./_components/FoodDetail-Dialog";
 import { FoodItem } from "./_components/FoodCard";
 import { useCart } from "@/Context/CardContext";
-=======
+
 import { Header } from "@/app/_components/Header";
-import  Banner  from "@/app/_components/Banner";
-import  FoodGrid  from "@/app/_components/FoodGrid";
-import { FoodDetailDialog} from "@/app/_components/FoodDetailDialog";
+import Banner from "@/app/_components/Banner";
+import FoodGrid from "@/app/_components/FoodGrid";
+import { FoodDetailDialog } from "@/app/_components/FoodDetailDialog";
 import { FoodItem } from "@/app/_components/FoodCard";
 import { useCart } from "./Context/CardContext";
->>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9
 
 const foodItems = [
   {

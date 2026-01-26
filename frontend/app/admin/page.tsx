@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import CategoryTabs from "./_components/CategoryTabs";
 import DishCard from "./_components/DishCard";
 export default function AdminPage() {
@@ -21,7 +20,7 @@ export default function AdminPage() {
     </div>
   );
 }
-=======
+
 // import { Card } from "@/components/ui/card";
 // import { CreateFoodDialog } from "./_components/CreateFoodDialog";
 // import { useEffect } from "react";
@@ -32,8 +31,8 @@ export default function AdminPage() {
 //     useEffect(() => {
 //         const getData = async () => {
 //             const rec = await fetch ("http://localhost:4000/foods")
-//             const data = await rec.json(); 
-//         } 
+//             const data = await rec.json();
+//         }
 //     }, [])
 
 //     return(
@@ -55,4 +54,3 @@ export default function AdminPage() {
 //         </main>
 //     )
 // }
->>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9

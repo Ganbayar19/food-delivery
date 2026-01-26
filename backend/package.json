@@ -13,20 +13,14 @@
   "description": "",
   "dependencies": {
     "express": "^5.2.1",
-<<<<<<< HEAD
     "jsonwebtoken": "^9.0.3",
-=======
->>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9
     "mongoose": "^8.21.0",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-<<<<<<< HEAD
     "@types/jsonwebtoken": "^9.0.10",
-=======
->>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9
     "@types/react": "^19.2.7",
     "typescript": "^5.9.3"
   }

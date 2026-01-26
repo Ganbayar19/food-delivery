@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client";
 
 import { FoodCard, FoodItem } from "./FoodCard";
@@ -20,7 +20,7 @@ export function FoodGrid({ title, items, onItemClick }: FoodGridProps) {
         ))}
       </div>
     </div>
-=======
+
 import { foods, Food } from "./data/food";
 import {FoodCard} from "./FoodCard";
 
@@ -60,6 +60,6 @@ export default function FoodSection() {
         })}
       </div>
     </section>
->>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9
+
   );
 }
