@@ -1,10 +1,18 @@
 "use client";
 
+<<<<<<< HEAD
 import { CartItem as CartItemType } from "@/Context/CardContext";
 import { CartItem } from "./CardItem";
 import { EmptyCart } from "./EmptyCard";
 import { DeliveryLocation } from "./DeliveryLocation";
 import { PaymentSummary } from "./PlaymentSummrary";
+=======
+import { CartItem as CartItemType } from "@/app/Context/CardContext";
+import { CartItem } from "./CardItem";
+import { EmptyCart } from "./EmptyCard";
+import { DeliveryLocation } from "./DeliveryLocation";
+import { PaymentSummary } from "./PaymentSummary";
+>>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9
 import { Button } from "@/components/ui/button";
 
 interface CartContentProps {

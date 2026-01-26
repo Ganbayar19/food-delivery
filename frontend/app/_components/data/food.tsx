@@ -7,6 +7,10 @@ export type Food = {
 };
 
 export const foods: Food[] = [
+<<<<<<< HEAD
+=======
+  // Appetizers
+>>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9
   {
     id: 1,
     title: "Spring Rolls",
@@ -21,6 +25,11 @@ export const foods: Food[] = [
     img: "/foods/garlic-bread.jpg",
     category: "appetizer",
   },
+<<<<<<< HEAD
+=======
+
+  // Salads
+>>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9
   {
     id: 3,
     title: "Caesar Salad",
@@ -35,6 +44,11 @@ export const foods: Food[] = [
     img: "/foods/greek.jpg",
     category: "salad",
   },
+<<<<<<< HEAD
+=======
+
+  // Lunch Favorites
+>>>>>>> 1fe0014feacf081cd9f996ae25323c7a8c5343e9
   {
     id: 5,
     title: "Grilled Chicken",
