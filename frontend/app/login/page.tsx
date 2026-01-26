@@ -1,13 +1,12 @@
-import Login from "../_components/login/Login";
+import { z } from "zod";
 
-export default function LoginPage() {
-  const handleLogin = () => {
-    console.log("Logged in");
-  };
+export const passwordSchema = z
+  .string()
+  .min(8, "Weak password. Use numbers and symbols.")
+  .regex(/[0-9]/, "Weak password. Use numbers and symbols.")
+  .regex(/[a-zA-Z]/, "Weak password. Use numbers and symbols.");
 
-  const handleGoSignup = () => {
-    window.location.href = "/";
-  };
-
-  return <Login goLogin={handleLogin} goSignup={handleGoSignup} />;
-}
+export const loginSchema = z.object({
+  email: z.string().email("Invalid email address"),
+  password: passwordSchema,
+});
