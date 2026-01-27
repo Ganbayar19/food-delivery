@@ -1,11 +1,3 @@
-import express from "express";
-
-export const CategoryRouter = express.Router();
-
-CategoryRouter.get("/", (req, res) => {
-  res.json({ message: "Category route working" });
-});
-
 import { Router } from "express";
 import { getCategories } from "../controllers/category/get-categories.js";
 import { createCategory } from "../controllers/category/create-categories.js";

@@ -1,6 +1,6 @@
 "use client";
 
-import Login from "../_components/login/Login";
+import Login from "./Login"
 
 export default function LoginPage() {
   const handleLogin = () => {

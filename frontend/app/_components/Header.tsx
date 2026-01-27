@@ -16,8 +16,6 @@ export default function Header({ totalItems, onCartClick }: HeaderProps) {
           <span className="text-white text-lg font-bold">
             <img src="/Header.png" alt="header" />
           </span>
-
-          <span className="text-white text-lg font-bold">🍜</span>
         </div>
         <div>
           <h1 className="text-white font-bold text-base leading-none">

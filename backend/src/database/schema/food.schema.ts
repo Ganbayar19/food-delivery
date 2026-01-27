@@ -8,9 +8,6 @@ const foodSchema = new Schema(
 
     ingredients: { type: Number, required: true },
     category: { type: Number, required: true },
-
-    ingredient: { type: String, required: true },
-    category: { type: String, required: true },
   },
   {
     timestamps: true,

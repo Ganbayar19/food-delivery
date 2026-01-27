@@ -1,40 +1,24 @@
-
-import { Type } from "lucide-react";
 import { Schema, model } from "mongoose";
-import { ref } from "node:process";
-
-import { Schema, model } from "mongoose";
-
 
 const orderSchema = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
 
-    orderItems: [
-      {
-        foodId: { type: Schema.Types.ObjectId, ref: "Food", required: true },
-
     items: [
       {
-        foodId: { type: Schema.Types.ObjectId, ref: "User", required: true },
-
+        foodId: { type: Schema.Types.ObjectId, ref: "Food", required: true },
         quantity: { type: Number, required: true },
         price: { type: Number, required: true },
       },
     ],
 
-    status: { type: String, required: true, default: "pending" },
-
-    status: { type: String, required: true, default: 'pending' },
-
+    status: {
+      type: String,
+      enum: ["pending", "paid", "delivered", "cancelled"],
+      default: "pending",
+    },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true },
 );
 
-
-export const orderModel = model("Order", orderSchema);
-
 export const OrderModel = model("Order", orderSchema);
-

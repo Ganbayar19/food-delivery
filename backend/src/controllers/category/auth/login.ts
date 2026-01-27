@@ -1,11 +1,10 @@
 import type { RequestHandler } from "express";
-import { userModel } from "../../../database/schema/user.schema.js";
-import jwt from "jsonwebtoken";
-
+import { UserModel } from "../../../database/schema/user.schema.js";
+import jwt from "jsonwebtoken"
 export const login: RequestHandler = async (req, rec) => {
   const { username, password } = req.body;
 
-  const user = await userModel.findOne({ username });
+  const user = await UserModel.findOne({ username });
 
   if (!user) return rec.status(404).json({ message: "User not found" });
 
