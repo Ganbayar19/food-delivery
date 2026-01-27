@@ -10,6 +10,7 @@ import { FoodGrid } from "./_components/FoodGrid";
 import { FoodDetailDialog } from "./_components/FoodDetail-Dialog";
 import { FoodItem } from "./_components/FoodCard";
 import { useCart } from "@/Context/CardContext";
+import Footer from "./_components/Footer";
 
 const foodItems = [
   {
@@ -92,12 +93,19 @@ export default function Home() {
         items={foodItems}
         onItemClick={setSelectedFood}
       />
+      <FoodGrid
+        title=" Salads"
+        items={foodItems}
+        onItemClick={setSelectedFood}
+      />
 
       <FoodDetailDialog
         food={selectedFood}
         onClose={() => setSelectedFood(null)}
         onAddToCart={handleAddToCart}
       />
+
+      <Footer />
     </div>
   );
 }
