@@ -34,25 +34,17 @@ export default function Header({ totalItems, onCartClick }: HeaderProps) {
             <img src="/location.png" alt="icon" />
           </span>
 
-          <span className="text-red-500 text-sm">📍</span>
-
           <span className="text-gray-700 font-medium">
             Delivery address: Add Location
           </span>
-          <span className="text-gray-400 text-xs">▼</span>
+          <span className="text-gray-400 text-xs">
+            <img src="/Vector.png" alt="vector" />
+          </span>
         </Button>
 
         <Button
           size="icon"
-          variant="ghost"
           className="w-9 h-9 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
-        >
-          <span className="text-white text-sm">🔍</span>
-        </Button>
-
-        <Button
-          size="icon"
-          className="w-9 h-9 bg-red-500 rounded-full hover:bg-red-600 relative transition-all shadow-md"
           onClick={onCartClick}
         >
           <ShoppingCart className="h-4 w-4 text-white" />
@@ -61,6 +53,16 @@ export default function Header({ totalItems, onCartClick }: HeaderProps) {
               {totalItems}
             </span>
           )}
+        </Button>
+
+        <Button
+          size="icon"
+          variant="ghost"
+          className=" w-9 h-9 bg-red-500 rounded-full hover:bg-red-600 relative transition-all shadow-md"
+        >
+          <span className="text-white text-sm">
+            <img src="/user.png" alt="user" />
+          </span>
         </Button>
       </div>
     </header>
