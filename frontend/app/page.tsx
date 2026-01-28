@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 import { CartDrawer } from "./_components/CardDrawer";
@@ -11,7 +11,8 @@ import { FoodDetailDialog } from "./_components/FoodDetail-Dialog";
 import { FoodItem } from "./_components/FoodCard";
 import { useCart } from "@/Context/CardContext";
 import Footer from "./_components/Footer";
-
+import { foods } from "./_components/data/food";
+import {api} from "@/lib/axios";
 const foodItems = [
   {
     id: 1,
@@ -78,6 +79,19 @@ export default function Home() {
     setSelectedFood(null);
     toast.success("Food is being added to the cart!");
   };
+
+  useEffect (() =>{
+    const getFoods = async () => {
+      try {
+        const {data} = await api.get("/foods")
+        console.log("fetched foods:", data);
+      }catch (error) {
+        console.error ("Error fetching foods:", error)
+      }
+    };
+
+    getFoods();
+  },[])
 
   return (
     <div className="min-h-screen bg-[#2a2a2a]">

@@ -49,7 +49,7 @@ export default function Header({ totalItems, onCartClick }: HeaderProps) {
         >
           <ShoppingCart className="h-4 w-4 text-white" />
           {totalItems > 0 && (
-            <span className="absolute -top-1 -right-1 bg-white text-red-500 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">
+            <span className="absolute top-3 right-19 bg-white text-red-500 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-sm">
               {totalItems}
             </span>
           )}

@@ -47,7 +47,7 @@ export default function LoginPage() {
           </p>
         </div>
       </div>
-      <div className="hidden md:block relative">
+      <div className="hidden md:block relative ">
         <Image
           src="/login.jpg"
           alt="Food delivery"
